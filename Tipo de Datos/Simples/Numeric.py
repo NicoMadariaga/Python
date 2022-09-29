@@ -25,3 +25,9 @@ modulo = entero // real
 
 #Resto
 resto = entero % real
+
+### Metodos
+
+#Convertir una cadena a un tipo de dato entero
+cadena = '3'
+int(cadena)

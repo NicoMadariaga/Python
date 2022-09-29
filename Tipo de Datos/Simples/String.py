@@ -46,7 +46,7 @@ cadena.title()
 cadena.strip()
  
 #Reemplazar una subcadena dentro de una cadena
-cadena.replace(old, new)
+cadena.replace('mundo', 'world')
  
 #Corta una subcadena
 cadena2 = cadena[5:10] # Subcadena desde el indice 5 al 9

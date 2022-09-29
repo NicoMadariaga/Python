@@ -8,7 +8,7 @@
 '''
 def: (palabra clave para definir una función)
 Nombre:
-Parámetros:(ninguno o mas – cantidad ilimitada)
+Parámetros:(ninguno o mas, cantidad ilimitada)
 Cuerpo: (bloque de código)
 Valor de retorno (ninguno o uno)
 
@@ -16,8 +16,6 @@ def nombre (parámetro1, parámetro2,..):
     #cuerpo de la función
     return #valor del retorno
 '''
-from tkinter.tix import INTEGER
-
 
 def suma (a,b):
     resultado = a + b
@@ -80,7 +78,8 @@ type(variable) # Nos indica el tipo de dato de la variable.
 del (variable) # Elimina una variable.
 
 #Nota: inpu(). Split() = toma multiples entradas de datos en una misma línea, por ejemplo si el usuario ingresa: 10 20 25, toma los números separados por el espacio
-X, y, z = int(input().split()
+X, y, z = int(input().split())
 
-map() aplica una función a cada elemento de un iterable(lista, tupla, diccionario)
-	map(función, iterable)
+#map(función, iterable) aplica una función a cada elemento de un iterable(lista, tupla, diccionario)
+cadenas = ['1','2','3']
+map(int(), cadenas)
