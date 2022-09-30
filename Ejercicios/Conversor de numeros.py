@@ -21,17 +21,19 @@ def binario_decimal(binario):
         decimal += int(x) * (2 ** posicion)
         posicion -= 1
     return(decimal)
-'''
+
+#Main
 decimal = int(input('Ingrese un nuemro desimal: '))
 print(decimal_binario(decimal))
-'''
+
 binario = input('Ingrese un numero binario: ')
 print(binario_decimal(binario))
-
-tabla_hexa = {'0':'0000', '1':'0001', '2':'0010', '3':'0011', '4':'0100', '5':'0101', '6':'0110', '7':'0111'
+'''
+tabla_hexa = {'0':'0000', '1':'0001', '2':'0010', '3':'0011', '4':'0100', '5':'0101', '6':'0110', '7':'0111',
                 '8':'1000', '9':'1001', 'A':'1010', 'B':'1011', 'C':'1100', 'D':'1101', 'E':'1110', 'F':'1111'}
 
 while len(binario) != 0:
     if len(bianrio >= 4):
         cuatrprimeros = binario
         hexadecimal = 
+'''
