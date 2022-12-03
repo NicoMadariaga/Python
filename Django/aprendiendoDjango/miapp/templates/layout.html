@@ -1,0 +1,77 @@
+{% load static %}<!--Cargamos los estilos css dentro que estan dentro de static-->
+<!DOCTYPE html>
+<html lang="es"><!--Escribiendo doc y apretamos Enter, nos rellena toda la estructura de una pagina html-->
+<head>
+    <meta charset="UTF-8"><!--esto permite que la pagina reconozca los tildes y las ñ-->
+    
+    <title>
+        {% block title %}
+
+        {% endblock%}
+        | Nicolas Madariaga
+    </title>
+    {% load static %}<!--Cargamos los estilos css dentro que estan dentro de static-->
+    <!--Cargamos el filtro-->
+   
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+</head>
+<body>
+    <!--Cabecera de la pagin-->
+    <header>
+        
+        <div id="logotipo">
+            <!--LogoTipo Django-->
+            <img src="{% static 'images/logo.png' %}">
+            <h1>Sitio Web con Django</h1>
+        </div>
+        
+    </header>
+
+    <!--Menu de navegacion-->
+    <nav>
+        <ul>
+            <li>
+                <a href="{% url 'index' %}">Inicio</a>
+            </li>
+            <li>
+                <a href="{% url 'buscar' %}">Buscar Articulo</a>
+            </li>
+            <li>
+                <a href="{% url 'pagina' %}">Pagina de Prueba</a>
+            </li>
+            <li>
+                <a href="{% url 'creta_full_article' %}">Crear Articulo</a>
+            </li>
+            <li>
+                <a href="{% url 'articulos' %}">Articulos</a>
+            </li>
+            <li>
+                <a href="{% url 'contacto' %}">Contacto</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!--Creamos un elemento para hacer la barra 3D-->
+    <div class="barra">
+        <span class="ezquina-izquierda"></span><!--span es una etiqueta vacia-->
+        <span class="relleno-barra"></span>
+        <span class="ezquina-derecha"></span>
+    </div>
+    
+    <!--Desde aqui comienza la caja de contenidos-->
+    <div id="content">
+
+        <div class="box">
+            {% block content %}
+            <!--Codigo que viene desde el template-->
+            {% endblock %}
+        </div>
+        
+    </div>
+
+    <footer>
+        Master en Python &copy: Nicolas Madariaga WEB {% now "SHORT_DATE_FORMAT" %}
+    </footer>
+</body>
+</html>
+

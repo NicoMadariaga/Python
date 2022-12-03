@@ -1,0 +1,44 @@
+{% extends 'layout.html'%}
+
+{% block title%} Listado de Articulos {% endblock %}
+
+{% block content%}
+
+<h1 class="tittle">Listado de Articulos</h1>
+<!--Mostramos el messages-->
+<!--Hacemos un if para corroborar si hay mensajes-->
+{% if messages %}
+    <!--Hcemos un for para que muestre cada objeto de messages-->
+    {% for message in messages  %}
+        <div class="message">{{message}}</div>
+    {% endfor %}
+{% endif %}
+
+{% for articulo in articulos  %}
+    <article class='article-item'>
+        <!--Cargamos la imagen, primero comprobamos si hay imagen con un if-->
+        {% if articulo.image != 'null' and articulo.image.url|length >= 1 %}
+
+            <div class='image'>
+                <img src="{{articulo.image.url}}" >
+            </div>
+
+        {%endif%}
+
+        <div class='data'>
+            <h2>{{articulo.title}}</h2>
+            
+            <p>
+                {{articulo.content}}
+                
+                <!--Creamos un link para borrar el articulo y le pasamos el id por parametro-->
+                <a href="{% url 'borrar' articulo.id %}">Eliminar</a>
+            </p>
+        </div>    
+        <div class='clearfix'></div>
+
+    </article>
+
+    {% endfor %}    
+
+{% endblock %}

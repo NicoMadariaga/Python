@@ -1,0 +1,20 @@
+{% extends 'layout.html'%}
+
+{% block title%} Buscar Articulo {% endblock %}
+
+{% block content%}
+
+<h1 class="tittle">Buscar Articulo</h1>
+
+
+<form action="{% url 'articulo' %}" method="POST">
+    {% csrf_token %}
+
+    <label for="title">Titulo</label>
+    <input type="text" name="title" placeholder="Introduce el titulo" >
+
+    <input type="submit" value="Guardar">
+</form>
+
+{% endblock %}
+

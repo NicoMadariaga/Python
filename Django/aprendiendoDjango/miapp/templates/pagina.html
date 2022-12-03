@@ -1,0 +1,41 @@
+{% extends 'layout.html'%}
+
+{% block title%} Pagina de Prueba {% endblock %}
+
+{% block content%}
+
+<h1 class="tittle">Pagina de mi web</h1>
+<p>Creado por Nicolas Madariaga el Mejor</p>
+<!--cut:" " quita los espacios en blanco-->
+<p>{{"Probando filtros" | cut:" "}}</p>
+
+<!--nos muestra el texto "No hay texto", si la variable viene vacia-->
+{{texto | default:"No hay texto"}}
+
+{% comment "comentario" %}
+<!--Nos da el ultimo elemento de la lista, first nos da el primero-->
+{{lista | last}}
+
+<!--Nos da un elemento de la lista aleatorio-->
+{{lista | random}}
+
+<!--Nos muestra la lista separadas por ,-->
+{{lista | join:', '}}
+
+<!--Nos da el total de elementos de la lista. Puede ser de un string tb-->
+{{lista | length}}
+
+<!--exto en Mayuscula, y lower en minuscula-->
+{{"Texto pueba" | upper}}
+
+<!--Quita todos los elementos html-->
+{{"<h1>Hola</h1> <strong>Chau</strong>" | striptags}}
+{% endcomment %}
+
+<!--Filtro personalizado-->
+{% load filters %}
+{{"Nicolas Madariaga"|saludo|safe}}
+<!--safe para que tome las etiquetas html-->
+
+
+{% endblock %}

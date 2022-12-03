@@ -1,0 +1,27 @@
+{% extends 'layout.html'%}
+
+{% block title%} Crear Articulo {% endblock %}
+
+{% block content%}
+
+<h1 class="tittle">Crear Artiulo con formulario</h1>
+<p>Creado por Nicolas Madariaga el Mejor</p>
+
+<!--Creamos el formulario-->
+
+<!--dejamos el action vacio para que trabaje con la pagina donde estamos actualmente-->
+<form action="" method="POST">
+    <!--csrf_token, impide ataque a la web por secuestro de sesión-->
+    {% csrf_token %}
+
+    <!--Mostramos el formulario con el objeto que pasamos como parametro-->
+    <!--nos coloca los elementos del formulario dentro de un parrafo-->
+    {{ form }}
+
+    <!--submit, nos permite crear un boton-->
+    <input type="submit" value="Guardar">
+
+</form>
+
+
+{% endblock %}

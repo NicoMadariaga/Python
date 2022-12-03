@@ -1,0 +1,241 @@
+/*Estilos generales*/
+*{
+    margin: 0px; /*Que no tengan margenes*/
+    padding: 0px; /*Que no tengan margen interno*/
+    font-family: sans-serif, Arial, Helvetica; /*Tipo de fuente por defecto*/    
+    text-decoration: none;/*No tenga ningun tipo de configuración por defecto*/
+}
+
+/*Le damos estilo a los parrafos*/
+.box p, .box h2, .box h3, .box ul{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.box ul, .box ol{
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+.box form {
+    width: 40%;
+}
+
+.box form input,
+.box form label{
+    display: block;
+    padding: 5px;
+}
+
+.box form select{
+    width: 90px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.box form input[type='submit']{
+    padding: 10px;
+    margin-top: 15px;
+    background: #2ba977;
+    color: white;
+}
+
+/*Le damos estilo a las cajas tipo texto*/
+.box input[type="text"], 
+.box textarea {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.clearfix{
+    clear: both;
+    float: none;
+}
+
+.message{
+    padding: 20px;
+    background-color: #2ba977;
+    color: beige;
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+
+/* Estilos del body*/
+body{
+    background-color: #f2f2f2;/*Color de fondo*/
+}
+
+header{
+    width: 1212px;/*Ancho*/
+    height: 140px;/*Altura*/
+    background-color: #23282b;
+    margin: auto;/*Margen, auto = centra el elemento, 10 px le da margen superior */
+}
+
+/*Le damos estilo a la caja logotipo*/
+#logotipo {
+    width: 42%;/*ancho*/
+    height: 120px;/*Altura*/
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+/*Le damos estilo a la imagen*/
+#logotipo img{
+    display: block;
+    width: 60px;/*Para darle un tamaño concreto */
+    float: left;/*coloca la imagen a la izquierda*/
+    margin-top: 10px;
+}
+
+/*se coloca # cuando se le quiere dar estilo a un id creado en el archivo html*/
+/*En este caso se da estilo solo al h1 del id logotipo*/
+#logotipo h1{
+    display: block;/*Para  poder maniularlo*/
+    letter-spacing: 2px;
+    float:left;
+    font-weight: normal;
+    color: #2ba977;
+    margin-top: 45px;
+    margin: 20px;
+}
+
+/*Estilos barra navegacion*/
+
+nav{
+    width: 1250px;/*ancho*/
+    height: 40px;
+    margin: auto;/*colocamos la barra de navegacion en el centro*/
+    background-color: #1b1e1f;
+    border: 1px solid #333333;
+    box-shadow: 0px 22px 22px gray ;/*Hace el efecto de sombra*/
+    /*0px en x, 22px en y, 22ps de difuminado*/
+    font-size: 15px;/*tamaño de fuente*/
+}
+
+nav ul{
+    list-style: none;/*quitamos os estilos*/
+    text-decoration: none;/*quitamos la decoracion del texto*/
+}
+
+nav ul li{
+    line-height: 40px;/*separacion del texto*/
+    float: left;/*se colocan los elemento unos al lado del otro*/
+}
+
+nav ul li a{
+    display: block;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #d1d4d6;
+} 
+
+/*Cambiar el estilo cuando nos posicionamos sobre el elemento con el puntero*/
+nav ul li a:hover{
+    background: #2ba977;
+    box-shadow: 0px 0px 5px #333333 inset; /*inset es difuminado dentro de la caja*/
+    color: white;
+    transition: all 300ms; /*una tranzicion permite que sea suavizado el movimiento*/
+}
+
+/*Damos estilo 3D a la barra del nav*/
+
+/*Para dar estilo a una clase*/
+.barra{
+    width: 1250px;/*mismo ancho que la nav*/
+    margin: auto;
+ 
+}
+
+.ezquina-izquierda{
+    display: block;
+    border-left: 20px solid transparent;
+    border-top: 10px solid #2b2f30;
+    float: left;
+}
+
+.ezquina-derecha{
+    display: block;
+    border-right: 20px solid transparent;
+    border-top: 10px solid #2b2f30;
+    float: right;
+}
+
+.relleno-barra{
+    display: block;
+    width: 1210px;
+    height: 10px;
+    background: #2b2f30;
+    float: left;
+}
+
+/*Estilos contenido central*/
+#content{
+    width: 1212px;
+    min-height: 930 px;
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+.box{
+    background: white;
+    width: 95%;
+    min-height: 930px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    margin: auto;
+}
+
+/*Estilo a los titulos*/
+.tittle{
+    color: #444;
+    letter-spacing: 1px;
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.article-item{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.article-item .image{
+    width: 200px;
+    height: 200px;
+    float: left;
+    overflow: hidden;
+
+}
+
+/*Le damos estilo a la imagen en si*/
+.article-item .image img{
+    height: 200px;
+}
+
+.article-item data{
+    float: left;
+    padding: 15px;
+}
+
+.article-item h2{
+    font-size: 25px;
+    color: #333;
+}
+
+footer{
+    width: 1250px;
+    background-color: #1b1e1f;
+    border: 1px solid #333;
+    color: #d1d4d6;
+    text-align: center;/*alineamos el texto dentro de la caja*/
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0px 0px 20px gray;
+    margin: auto;
+}

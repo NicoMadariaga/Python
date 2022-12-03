@@ -1,0 +1,37 @@
+<!--heredamos la vista de layout-->
+{% extends 'layout.html'%}
+
+{% block title%} {{title}} {% endblock %}
+
+{% block content%}
+
+    <h1 class="tittle">{{title}}</h1>
+    <!--Variable que pasamos como parametro desde views-->
+    
+    <p> {{mi_variable}} </p>
+
+    <h2>Este es el inicio de mi proyecto</h2>
+    <!--Condicional en Django-->
+    {% if nombre %}
+        <p>Creado por {{nombre}} el Mejor</p>
+    {% else %}
+        <p>El nomnbre no existe</p>
+    {% endif %}
+
+    <!--Bucles en Django-->
+    <ul>
+        {% for l in lenguajes %}
+            <li> {{forloop.counter}} . {{l}} </li>
+            <!--Nos devuelve un valor booleano cuando es el primerelemento de la lista-->
+        {% endfor %}
+    </ul>
+    
+    
+{% endblock %}
+
+{% comment "comentarios" %}
+    esto es un comentario en Django, cuando se abre el codigo en el navegador,
+    no se muestra, a diferencia de los comentarios html, que si lo hacen
+{% endcomment %}
+
+
