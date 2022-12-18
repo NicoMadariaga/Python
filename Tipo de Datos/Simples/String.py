@@ -66,4 +66,7 @@ int(cadena)
 #Imprimir los datos de una variable dentro de un texto
 print(f"En la variable está {cadena2}")
 
+#Ordenar un string alfabeticamente (retorna una lista)
+sorted(cadena)
+
 

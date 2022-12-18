@@ -59,3 +59,5 @@ lista.count(10)
 #Agregar todos los elementos de una lista al final
 lista.extend(lista2)
 
+#Comparar si dos listas son iguales (misma longitud, mismos elementos y mismo orden)
+lista == lista2
